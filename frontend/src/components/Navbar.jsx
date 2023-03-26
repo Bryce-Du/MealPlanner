@@ -7,7 +7,8 @@ import './Navbar.css'
 
 function Navbar(props) {
   const dispatch = useDispatch()
-  const { user } = useSelector(state => state.auth ?? {})
+  const { user } = useSelector(state => state.auth.user ?? {})
+  console.log(user)
   const handleClick = () => {
     dispatch(logout())
   }

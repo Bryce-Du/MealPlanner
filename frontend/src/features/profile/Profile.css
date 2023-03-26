@@ -1,0 +1,12 @@
+.profile {
+  width: 50%;
+  margin: 16px auto;
+}
+
+.edit-button {
+  text-decoration: none;
+  color: white;
+  background-color: #77BB77;
+  padding: 8px;
+  border-radius: 8px;
+}
