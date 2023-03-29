@@ -23,9 +23,7 @@ export const editUser = createAsyncThunk(
   'user/editUser',
   async ({ id, editedUserData }, { rejectWithValue }) => {
     try {
-      console.log(id)
       const jwt = JSON.parse(localStorage.getItem('user')).token
-      console.log(jwt)
       const response = await fetch(`http://localhost:4000/api/user/${id}`, {
         method: 'PATCH',
         headers: {

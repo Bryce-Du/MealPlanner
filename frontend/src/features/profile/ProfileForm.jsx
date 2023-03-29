@@ -9,11 +9,12 @@ function ProfileForm(props) {
   const navigate = useNavigate()
   const { id } = useParams()
   const { user } = useSelector((state) => state.user)
-  const [formData, setFormData] = useState(user);
-
-  useEffect(() => {
-    setFormData(user);
-  }, [user]);
+  const [formData, setFormData] = useState({
+    name: user?.name || '',
+    email: user?.email || '',
+    location: user?.location || '',
+    pronouns: user?.pronouns || '',
+  });
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -22,7 +23,6 @@ function ProfileForm(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(id)
     dispatch(editUser({ id, editedUserData: formData }));
     navigate(`/user/${id}`)
   };
