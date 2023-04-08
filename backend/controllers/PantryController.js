@@ -21,6 +21,11 @@ const addIngredient = async (req, res) => {
   res.status(200).json(ingredient)
 }
 
+//editIngredient
+const editIngredient = async (req, res) => {
+  console.log(req.params)
+}
+
 module.exports = {
   addIngredient,
   getPantry
