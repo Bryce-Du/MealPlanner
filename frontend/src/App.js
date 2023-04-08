@@ -3,6 +3,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Login from './features/auth/Login';
 import Signup from './features/auth/Signup';
+import PantryList from './features/pantry/PantryList';
 import Profile from './features/profile/Profile';
 import ProfileForm from './features/profile/ProfileForm';
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/user/:id" element={<Profile />} />
           <Route path="/user/:id/edit" element={<ProfileForm />} />
+          <Route path="/user/:id/pantry" element={<PantryList />} />
         </Routes>
       </BrowserRouter>
     </div>
